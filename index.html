@@ -6,7 +6,9 @@
   <script src="js/jquery-3.1.0.js"></script>
   <script src="js/bootstrap.js"></script>
   <script src="js/scripts.js"></script>
-  <title></title>
+  <!--Google Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Uncial+Antiqua" rel="stylesheet">
+  <title>Challenges</title>
 </head>
 <body>
   <!--Word Puzzle-->
@@ -19,6 +21,7 @@
       <label>Enter a Sentence</label>
       <input class="form-control" type="text" id="sentence">
       <button type="submit" class="btn btn-danger" name="button">Submit</button>
+      <button type="reset" value="Reset" class="btn btn-warning">Reset</button>
     </form>
     <p id="puzzle">
 
@@ -27,8 +30,9 @@
     <h1>Palindrome</h1>
     <form id="two" class="form-group">
       <label>Enter a Word or Phrase</label>
-      <input class="form-control" type="text" id="phrase">
-      <button type="submit" class="btn btn-danger" name="button">Submit</button>
+      <input class="form-control" type="text" id="palin-phrase">
+      <button type="submit" class="btn btn-primary" name="button">Submit</button>
+      <button type="reset" value="Reset" class="btn btn-warning">Reset</button>
     </form>
     <p id="palindrome">
 
@@ -38,7 +42,8 @@
     <form id="three" class="form-group">
       <label>Enter a Number</label>
       <input class="form-control" type="text" id="number">
-      <button type="submit" class="btn btn-danger" name="button">Submit</button>
+      <button type="submit" class="btn btn-success" name="button">Submit</button>
+      <button type="reset" value="Reset" class="btn btn-warning">Reset</button>
     </form>
     <p id="factorial">
 
@@ -48,7 +53,8 @@
     <form id="sieve" class="form-group">
       <label>Enter a Number</label>
       <input class="form-control" type="text" id="sieve-number">
-      <button type="submit" class="btn btn-danger" name="button">Submit</button>
+      <button type="submit" class="btn btn-info" name="button">Submit</button>
+      <button type="reset" value="Reset" class="btn btn-warning">Reset</button>
     </form>
     <div class="output">
       <ul id="sieve-list">

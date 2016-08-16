@@ -29,30 +29,28 @@ $(function(){
     event.preventDefault();
     var stringInput = $("#sentence").val();
     var dashedString = changeDash(stringInput);
-
+    $("#sen").hide();
     $("p#puzzle").text(dashedString);
   });
 });
 // Palindrome
-
 var isPalindrome = function(word){
-  var wordArray = word.split("");
-  var anotherArray = wordArray.reverse();
-
-  var changed = anotherArray.join("");
-      word = wordArray.join("");
-
+  var splitBySpace = word.split(" ");
+  var wordSplit = splitBySpace.slice();
+  var reverseArray = splitBySpace.join("").split("");
+   reverseArray.reverse();
+  var changed = reverseArray.join("");
+  word = wordSplit.join("");
   if (word === changed){
     return "This is a Palindrome";
   } else {
     return "This is not a Palindrome";
   }
 }
-
 $(document).ready(function(){
   $("#two").submit(function(event){
     event.preventDefault();
-    var wordInput = $("#phrase").val();
+    var wordInput = $("#palin-phrase").val();
     var output = isPalindrome(wordInput);
     $("p#palindrome").text(output);
   });
@@ -88,7 +86,6 @@ var findPrimeNumbers = function(number){
   }
   return array;
 }
-
 $(function(){
   $("#sieve").submit(function(event){
     event.preventDefault();
