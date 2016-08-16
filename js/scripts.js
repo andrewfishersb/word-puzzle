@@ -30,7 +30,7 @@ $(function(){
     event.preventDefault();
     var stringInput = $("#sentence").val();
     var dashedString = changeDash(stringInput);
-    console.log(dashedString);
+  
     $("p").text(dashedString);
   });
 });
