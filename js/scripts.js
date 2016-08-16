@@ -1,21 +1,21 @@
 // Word Puzzle
 var isVowel =function(char){
-  if(char==='a'){
+  if(char==='a'|| char ==='A'){
     return true;
-  }else if(char==='e'){
+  }else if(char==='e' ||char==='E'){
     return true;
-  }else if (char === 'i'){
+  }else if (char === 'i' ||char ==='I'){
     return true;
-  }else if (char === 'o'){
+  }else if (char === 'o' || char ==='O'){
     return true;
-  }else if (char === 'u'){
+  }else if (char === 'u' || char==='U'){
     return true;
   }else {
     return false;
   }
 }
 var changeDash = function(string){
- var stringArray=string.split('');
+  var stringArray=string.split('');
   for(var i=0;i<stringArray.length;i++){
     if(isVowel(stringArray[i])){
       stringArray[i]='-';
@@ -38,7 +38,7 @@ var isPalindrome = function(word){
   var splitBySpace = word.split(" ");
   var wordSplit = splitBySpace.slice();
   var reverseArray = splitBySpace.join("").split("");
-   reverseArray.reverse();
+  reverseArray.reverse();
   var changed = reverseArray.join("");
   word = wordSplit.join("");
   if (word === changed){
@@ -57,19 +57,19 @@ $(document).ready(function(){
 });
 // Factorial
 var factorial = function(firstNumber){
-	var number = 1;
-	for(var index=firstNumber; index>0; index-=1){
-		number *= index;
-	}
-	return number;
+  var number = 1;
+  for(var index=firstNumber; index>0; index-=1){
+    number *= index;
+  }
+  return number;
 }
 $(function(){
-	$("#three").submit(function(event){
-		event.preventDefault();
-		var originalNumber = parseInt($("#number").val());
-		var factorialNumber = factorial(originalNumber);
-		$("p#factorial").text(factorialNumber);
-	});
+  $("#three").submit(function(event){
+    event.preventDefault();
+    var originalNumber = parseInt($("#number").val());
+    var factorialNumber = factorial(originalNumber);
+    $("p#factorial").text(factorialNumber);
+  });
 });
 // Sieve
 var findPrimeNumbers = function(number){
